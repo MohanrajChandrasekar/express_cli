@@ -45,24 +45,25 @@ export async function generateProject(options) {
         targetDirectory: options.targetDirectory || process.cwd()
     };
 
-    const srcPath = options.advanced === true ? 'advanced' : 'basic';
-    console.log(srcPath);
-    const currentFileUrl = import.meta.url;
-    let templateDir = path.resolve(
-        new URL(currentFileUrl).pathname,
-        '../../templates',
-        // options.template.toLowerCase()
-        srcPath
-    );
+    const srcTemplate = options.advanced === true ? 'advanced' : 'basic';
+    // const currentFileUrl = import.meta.url;
+    // let templateDir = path.resolve(
+    //     new URL(currentFileUrl).pathname,
+    //     '../../templates',
+    //     // options.template.toLowerCase()
+    //     srcTemplate
+    // );
 
-    const templateRefine = templateDir.split(':');
-    if (templateRefine.length > 2) {
-        templateDir = templateRefine[0] + ':' + templateRefine[2];
-    }
-    options.templateDirectory = templateDir;
+    const srcApps = path.join(__dirname, '..', 'templates', srcTemplate);
+    
+    // const templateRefine = templateDir.split(':');
+    // if (templateRefine.length > 2) {
+    //     templateDir = templateRefine[1] + ':' + templateRefine[2];
+    // }
+    options.templateDirectory = srcApps;
 
     try {
-        await access(templateDir, fs.constants.R_OK);
+        await access(options.templateDirectory, fs.constants.R_OK);
     } catch (err) {
         console.error(`%s Invalid template name`, chalk.red.bold('ERROR'));
         process.exit(1);

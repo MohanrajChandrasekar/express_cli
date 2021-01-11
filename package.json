@@ -1,5 +1,5 @@
 {
-  "name": "express-gen",
+  "name": "express-gen-bot",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
@@ -17,7 +17,7 @@
     "cli",
     "gen-project",
     "exp-app",
-    "express-gen"
+    "express-gen-bot"
   ],
   "author": "Mohanraj Chandrasekar",
   "license": "ISC",
@@ -33,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/MohanrajChandrasekar/express_cli.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/MohanrajChandrasekar/express_cli/issues"
   },
-  "homepage": ""
+  "homepage": "https://github.com/MohanrajChandrasekar/express_cli.git"
 }

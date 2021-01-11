@@ -21,7 +21,7 @@ function parseArgumentsIntoOptions(rawArgs) {
         skipPrompts: args['--yes'] || false,
         git: args['--git'] || false,
         runInstall: args['--install'] || false,
-        project: args._[0] || false
+        project: args._[0] || ''
     };
 }
 
@@ -33,7 +33,7 @@ async function promptForMissionOptions(opt) {
             advanced: false
         };
 
-        if (options.project === undefined) { // project name
+        if (!options.project || options.project === '') { // project name
             questions.push({
                 type: 'input',
                 name: 'project',

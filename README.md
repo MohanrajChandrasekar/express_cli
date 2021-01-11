@@ -1,16 +1,20 @@
 # what is this?
 
-Get the express node applications skeleton along with setups for your new projects.
+Get the express node applications with configured structure (passport, jwt, mongoose, routes and error handling middlewares) for your new projects.
 
 # Installation
 
-`npm i express-gen -g`
+`npm install -g express-gen-bot`
 
 Then...
 
 ...
-D:\> exp-app newServer
+$ exp-app newServer
 ...
+
+# image
+
+![alt text](https://github.com/MohanrajChandrasekar/express_cli/src/img1.png?raw=true)
 
 # options
 
