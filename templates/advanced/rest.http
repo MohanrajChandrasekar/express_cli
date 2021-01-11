@@ -1,0 +1,19 @@
+POST http://localhost:3000/api/user/addUser
+Content-Type: application/json
+
+{
+    "userName": "userName1",
+    "password": "userPassword1",
+    "createdBy": "Admin"
+
+}
+
+###
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "userName1",
+    "password": "userPassword1"
+}
+
