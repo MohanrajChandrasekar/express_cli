@@ -14,7 +14,7 @@ $ exp-app newServer
 
 # image
 
-![alt text](https://github.com/MohanrajChandrasekar/express_cli/src/img1.png?raw=true)
+![How to execute](https://github.com/MohanrajChandrasekar/express_cli/blob/main/src/img1.png?raw=true)
 
 # options
 
